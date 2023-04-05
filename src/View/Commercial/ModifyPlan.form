@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View.Commercial.ModifyPlan">
+  <grid id="27dc6" binding="ModifyPlan" layout-manager="GridLayoutManager" row-count="11" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="20" left="20" bottom="20" right="20"/>
+    <constraints>
+      <xy x="20" y="20" width="530" height="439"/>
+    </constraints>
+    <properties>
+      <background color="-4473925"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="465ee" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Rockwell" size="24"/>
+          <foreground color="-16382458"/>
+          <horizontalAlignment value="0"/>
+          <text value="Modify Plan"/>
+        </properties>
+      </component>
+      <component id="fec68" class="javax.swing.JComboBox" binding="selectPlanBox">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="25402" class="javax.swing.JLabel" binding="planNameLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="114" height="16"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Rockwell" size="14" style="1"/>
+          <foreground color="-16382458"/>
+          <horizontalAlignment value="0"/>
+          <text value="Plan name"/>
+        </properties>
+      </component>
+      <component id="4ff2e" class="javax.swing.JLabel" binding="descriptionLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="114" height="16"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Rockwell" size="14" style="1"/>
+          <foreground color="-16382458"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="2"/>
+          <text value="Description"/>
+        </properties>
+      </component>
+      <component id="48568" class="javax.swing.JLabel" binding="daysLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="114" height="16"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Rockwell" size="14" style="1"/>
+          <foreground color="-16382458"/>
+          <horizontalAlignment value="0"/>
+          <text value="Days"/>
+        </properties>
+      </component>
+      <component id="c8f6c" class="javax.swing.JLabel" binding="hourLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="114" height="16"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Rockwell" size="14" style="1"/>
+          <foreground color="-16382458"/>
+          <horizontalAlignment value="0"/>
+          <text value="Hour"/>
+        </properties>
+      </component>
+      <component id="aec70" class="javax.swing.JLabel" binding="priceLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="114" height="16"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Rockwell" size="14" style="1"/>
+          <foreground color="-16382458"/>
+          <horizontalAlignment value="0"/>
+          <text value="Price"/>
+        </properties>
+      </component>
+      <component id="2ee1b" class="javax.swing.JLabel" binding="peopleLabel">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="114" height="16"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Rockwell" size="14" style="1"/>
+          <foreground color="-16382458"/>
+          <horizontalAlignment value="0"/>
+          <text value="People"/>
+        </properties>
+      </component>
+      <component id="9042e" class="javax.swing.JLabel" binding="childrenLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="114" height="16"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Rockwell" size="14" style="1"/>
+          <foreground color="-16382458"/>
+          <horizontalAlignment value="0"/>
+          <text value="Children"/>
+        </properties>
+      </component>
+      <component id="864a6" class="javax.swing.JLabel" binding="souvenirLabel">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="114" height="16"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Rockwell" size="14" style="1"/>
+          <foreground color="-16382458"/>
+          <horizontalAlignment value="0"/>
+          <text value="Souvenir"/>
+        </properties>
+      </component>
+      <component id="c8d30" class="javax.swing.JLabel" binding="selectPlanLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="114" height="16"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Rockwell" size="14" style="1"/>
+          <foreground color="-16382458"/>
+          <horizontalAlignment value="0"/>
+          <text value="Select Plan"/>
+        </properties>
+      </component>
+      <component id="e7ed5" class="javax.swing.JTextField" binding="planName">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="b14db" class="javax.swing.JTextField" binding="daysTextField">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="f373b" class="javax.swing.JTextField" binding="PriceTextField">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="4fcb4" class="javax.swing.JSpinner" binding="peopleCounter">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="8db4" class="javax.swing.JRadioButton" binding="yesRadioButton" default-binding="true">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-4473925"/>
+          <font size="16"/>
+          <foreground color="-16382458"/>
+          <text value="Yes"/>
+        </properties>
+      </component>
+      <component id="40fb7" class="javax.swing.JRadioButton" binding="noRadioButton" default-binding="true">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-4473925"/>
+          <font size="16"/>
+          <foreground color="-16382458"/>
+          <text value="No"/>
+        </properties>
+      </component>
+      <component id="d285b" class="javax.swing.JTextField" binding="souvenirTextField">
+        <constraints>
+          <grid row="9" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="18f32" class="javax.swing.JButton" binding="acceptButton" default-binding="true">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Accept"/>
+        </properties>
+      </component>
+      <component id="cc2f6" class="javax.swing.JButton" binding="backButton" default-binding="true">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Back"/>
+        </properties>
+      </component>
+      <component id="833c4" class="javax.swing.JEditorPane" binding="descriptionPane">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="4bd19" class="javax.swing.JTextField" binding="hourTextField">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+    </children>
+  </grid>
+</form>
