@@ -22,11 +22,11 @@ public class Plans {
     int pricePlan;
     int accountingPeople;
     String souvenir;
-
-
     boolean children;
+
     private static Set<Integer> iDsGenerated = new HashSet<Integer>();
     private static Random randomGenerator = new Random();
+   
     public Plans(String namePlan,
                  String descriptionPlan,
                  String days,
@@ -90,7 +90,7 @@ public class Plans {
         this.hours = hours;
     }
 
-   public int getPricePlan() {
+    public int getPricePlan() {
         return pricePlan;
     }
 
@@ -143,5 +143,4 @@ public class Plans {
         iDsGenerated.add(newId);
         return newId;
     }
-
 }

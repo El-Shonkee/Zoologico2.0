@@ -10,7 +10,7 @@ public class plansControl{
     public static ArrayList<Plans> plansArrayList;
     public static ArrayList<String> planNames;
 
-      public plansControl() {
+    public plansControl() {
         plansArrayList = new ArrayList<>();
         planNames = new ArrayList<>();
     }

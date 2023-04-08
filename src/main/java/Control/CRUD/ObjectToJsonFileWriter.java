@@ -1,10 +1,9 @@
+//Clase que permite la lectura y creacion de las clases mediante archivos JSON
 package Control.CRUD;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
-
-
 
 public class ObjectToJsonFileWriter {
     public static <T> void saveInFile(T object, String filePath) {

@@ -1,3 +1,4 @@
+//Clase que permite escribir en archivos de texto para guardar la informacion en formato plano
 package Control.CRUD;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
