@@ -1,0 +1,1 @@
+user=name='qweqw', age=123, id='qweqw', email='qweqw', phone='qweqw', billNumber=410701, quantitySell=2, adults=2, children=0, price=100000, plan=Plan ID=968463Plan Name=LionsDescription=Watch the hunting, play, and daily behavior of the king of the savannah!Days=Wednesday - SundayHours=14:00 - 20:00Price=50000People=5Souvenir=Stuffed Animalchildren=false
