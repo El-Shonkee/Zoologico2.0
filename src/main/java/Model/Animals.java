@@ -5,7 +5,9 @@
 package Model;
 
 import java.util.ArrayList;
-
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
 /**
  *
  * @author andrea.correaa1
@@ -43,7 +45,7 @@ public class Animals {
     }
 
     public int getAnimalID(){
-        return animalID
+        return animalID;
     }
 
     public void setAnimalID(int animalID){

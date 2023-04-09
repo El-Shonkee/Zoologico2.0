@@ -4,13 +4,16 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import Control.CRUD.*;
+import Model.Plans;
+
 public class ModifyPlan extends JFrame {
     private JPanel ModifyPlan;
     private JComboBox selectPlanBox;
-    private JTextField planName;
+    private JTextField planNameTextField;
     private JTextField daysTextField;
     private JTextField hourTextField;
-    private JTextField PriceTextField;
+    private JTextField priceTextField;
     private JSpinner peopleCounter;
     private JRadioButton yesRadioButton;
     private JRadioButton noRadioButton;
@@ -27,6 +30,7 @@ public class ModifyPlan extends JFrame {
     private JLabel childrenLabel;
     private JLabel souvenirLabel;
     private JTextField souvenirTextField;
+    private JButton removePlanButton;
 
     public ModifyPlan(){
         setContentPane(ModifyPlan);
@@ -36,9 +40,30 @@ public class ModifyPlan extends JFrame {
         setVisible(true);
         setLocationRelativeTo(null);
 
+        Object[] plansArray = plansControl.planNames.toArray();
+        DefaultComboBoxModel comboBoxModel = new DefaultComboBoxModel(plansArray);
+        selectPlanBox.setModel(comboBoxModel);
+
+        selectPlanBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Plans plan = plansControl.searchPlan(selectPlanBox.getSelectedItem().toString());
+                planNameTextField.setText(plan.getNamePlan());
+                descriptionPane.setText(plan.getDescriptionPlan());
+                daysTextField.setText(plan.getDays());
+                hourTextField.setText(plan.getHours());
+                priceTextField.setText(String.valueOf(plan.getPricePlan()));
+                peopleCounter.setValue(plan.getAccountingPeople());
+                yesRadioButton.setSelected(plan.isChildren());
+                souvenirTextField.setText(plan.getSouvenir());
+            }
+        });
+
         acceptButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+
 
             }
         });
@@ -51,6 +76,13 @@ public class ModifyPlan extends JFrame {
 
             }
         });
+        removePlanButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
     }
 
 

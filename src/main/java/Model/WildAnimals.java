@@ -14,8 +14,8 @@ public class WildAnimals extends Animals {
    String habitat, dietType;
    int danger;
 
-    public WildAnimals(String name, String type, String species, float age, float weight, int quantity, int zone, String habitat, String dietType, int danger) {
-        super(name, type, species, age, weight, quantity, zone);
+    public WildAnimals(int ID,String name, String type, String species, float age, float weight, int quantity, int zone, String habitat, String dietType, int danger) {
+        super(ID,name, type, species, age, weight, quantity, zone);
         this.habitat = habitat;
         this.dietType = dietType;
         this.danger = danger;

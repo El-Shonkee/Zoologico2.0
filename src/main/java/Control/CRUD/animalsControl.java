@@ -11,12 +11,12 @@ public class animalsControl {
 
     public animalsControl() {
         animalsArrayList = new ArrayList<>();
-        animalNames = new ArrayList<>();
+        animalsNames = new ArrayList<>();
     }
 
     public static void addAnimal(Animals animal) {
         animalsArrayList.add(animal);
-        planNames.add(animal.getName());
+        animalsNames.add(animal.getName());
     }
 
     public void deleteAnimal(Animals animal){
@@ -25,7 +25,7 @@ public class animalsControl {
 
     public static Animals searchAnimal(String name){
         for(Animals animal: animalsArrayList){
-            if(animal.getName.equals(name)){
+            if(animal.getName().equals(name)){
                 return animal;
             }
         }
@@ -33,7 +33,7 @@ public class animalsControl {
     }
 
     public boolean modifyAnimal(String name, String type, String species, float age, float weight, int quantity, int zone ){
-        Plans animalModified = searchPlan(name);
+        Animals animalModified = searchAnimal(name);
 
         if(animalModified != null){
             animalModified.setName(name);

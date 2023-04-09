@@ -124,15 +124,15 @@ public class Plans {
 
     @Override
     public String toString() {
-        return  "Plan ID=" + idPlan + "\'" +
-                ", Plan Name=" + namePlan + "\'" +
-                ", Description=" + descriptionPlan + "\'" +
-                ", Days=" + days + "\'" +
-                ", Hours=" + hours + "\'" +
-                ", Price=" + pricePlan + "\'" +
-                ", People=" + accountingPeople + "\'" +
-                ", Souvenir=" + souvenir + "\'" +
-                ", childrens=" + children;
+        return  "Plan ID=" + idPlan +
+                "Plan Name=" + namePlan +
+                "Description=" + descriptionPlan +
+                "Days=" + days +
+                "Hours=" + hours +
+                "Price=" + pricePlan +
+                "People=" + accountingPeople +
+                "Souvenir=" + souvenir +
+                "children=" + children;
     }
 
     private static int randomIdGenerator() {

@@ -3,10 +3,15 @@ package View.Commercial;
 import Control.CRUD.ObjectToJsonFileWriter;
 import Model.Plans;
 import Control.CRUD.plansControl;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
+import java.io.FileWriter;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CreatePlan extends JFrame  {
     private JPanel createPlan;
@@ -44,16 +49,11 @@ public class CreatePlan extends JFrame  {
                 String planSouvenir = souvenirTextField.getText();
                 boolean children = yesRadioButton.isSelected();
 
-                    Plans plan = new Plans(
-                            planName,
-                            planDescription,
-                            planDays,
-                            planHours,
-                            planPrice,
-                            accountPeople,
-                            planSouvenir,
-                            children);
-                    plansControl.addPlan(plan);
+                Plans plan = new Plans(planName,planDescription,planDays,planHours,planPrice,accountPeople,planSouvenir,children);
+                plansControl.addPlan(plan);
+
+                String planFileName = "Plans.json";
+                ObjectToJsonFileWriter.appendToFile(plan,planFileName);
 
                 PlanNameTextField.setText("");
                 descriptionTextPane.setText("");
@@ -63,9 +63,6 @@ public class CreatePlan extends JFrame  {
                 spinnerPeople.setValue(0);
                 souvenirTextField.setText("");
                 yesRadioButton.setSelected(false);
-
-                String plans = "Plans.json";
-                ObjectToJsonFileWriter.saveInFile(plan,plans);
             }
         });
 
