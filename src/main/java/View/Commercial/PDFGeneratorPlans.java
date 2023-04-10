@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import Model.Plans;
 import com.itextpdf.text.Font;
 
-
 public class PDFGeneratorPlans {
 
     public static void generatePDFReport(ArrayList<Plans> plansList) throws DocumentException, IOException {

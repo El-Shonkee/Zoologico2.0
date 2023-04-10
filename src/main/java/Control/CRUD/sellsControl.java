@@ -4,7 +4,6 @@ import Model.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 public class sellsControl {
     public static ArrayList<Sells> getSellsArrayList() {

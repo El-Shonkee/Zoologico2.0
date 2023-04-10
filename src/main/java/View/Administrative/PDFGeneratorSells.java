@@ -1,17 +1,11 @@
 package View.Administrative;
 
-
-import Control.CRUD.plansControl;
-import Model.Plans;
-import View.Commercial.PDFGeneratorPlans;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import Model.Sells;
-
-import javax.swing.*;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
