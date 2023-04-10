@@ -3,15 +3,10 @@ package View.Commercial;
 import Control.CRUD.ObjectToJsonFileWriter;
 import Model.Plans;
 import Control.CRUD.plansControl;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.io.FileWriter;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class CreatePlan extends JFrame  {
     private JPanel createPlan;
@@ -52,7 +47,7 @@ public class CreatePlan extends JFrame  {
                 Plans plan = new Plans(planName,planDescription,planDays,planHours,planPrice,accountPeople,planSouvenir,children);
                 plansControl.addPlan(plan);
 
-                String planFileName = "Plans.json";
+                String planFileName = "C:\\Users\\shonk\\OneDrive\\Escritorio\\Zoologico 2.0\\JSONS\\Plans.json";
                 ObjectToJsonFileWriter.appendToFile(plan,planFileName);
 
                 PlanNameTextField.setText("");

@@ -2,18 +2,17 @@ package View.Administrative;
 
 import Model.*;
 import Control.CRUD.*;
-
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 
 public class Sells extends JFrame {
     private JPanel sellPanel;
     private JSpinner spinnerAdults;
-    private JSpinner spinnerQuantitySells;
     private JComboBox planSelector;
     private JSpinner spinnerChildren;
     private JButton acceptButton;
@@ -36,19 +35,11 @@ public class Sells extends JFrame {
         setLocationRelativeTo(null);
 
         //Spinner only can take positive values
-        SpinnerNumberModel model = new SpinnerNumberModel(1, 1, Integer.MAX_VALUE, 1);
         SpinnerNumberModel model1 = new SpinnerNumberModel(1, 1, Integer.MAX_VALUE, 1);
         SpinnerNumberModel model2 = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
 
-        spinnerQuantitySells.setModel(model);
         spinnerAdults.setModel(model1);
         spinnerChildren.setModel(model2);
-
-        //Planes de prueba
-        Plans plan1 = new Plans("Plan A", "Descripción del Plan A", "Lunes a Viernes", "9:00 - 17:00", 200, 10, "Camiseta", true);
-        Plans plan2 = new Plans("Plan B", "Descripción del Plan B", "Sábado y Domingo", "10:00 - 18:00", 300, 20, "Taza", false);
-        plansControl.addPlan(plan1);
-        plansControl.addPlan(plan2);
 
         Object[] plansArray = plansControl.planNames.toArray();
         DefaultComboBoxModel comboBoxModel = new DefaultComboBoxModel(plansArray);
@@ -59,23 +50,10 @@ public class Sells extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String planSelected = (String) planSelector.getSelectedItem();
                 Plans priceFinder = plansControl.searchPlan(planSelected);
-                formattedTextFieldPrice.setValue(priceFinder.getPricePlan() * (int) spinnerQuantitySells.getValue());
+                formattedTextFieldPrice.setValue(priceFinder.getPricePlan());
             }
         });
 
-        // Método para actualizar la variable canAccept
-
-// Controlador de cambio para spinnerQuantitySells
-        spinnerQuantitySells.addChangeListener(new ChangeListener() {
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                String planSelected = (String) planSelector.getSelectedItem();
-                Plans priceFinder = plansControl.searchPlan(planSelected);
-                formattedTextFieldPrice.setValue(priceFinder.getPricePlan() * (int) spinnerQuantitySells.getValue());
-
-                updateCanAccept(); // actualizar la variable canAccept
-            }
-        });
 
 // Controlador de cambio para spinnerAdults
         spinnerAdults.addChangeListener(new ChangeListener() {
@@ -103,18 +81,18 @@ public class Sells extends JFrame {
                     int age = Integer.parseInt(userAgeTextField.getText());
                     String email = userEmailTextField.getText();
                     String phone = userNumberTextField.getText();
-                    int quantitySell = (int) spinnerQuantitySells.getValue();
                     int adultsQuan = (int) spinnerAdults.getValue();
                     int childrenQuan = (int) spinnerChildren.getValue();
                     int priceSell = (int)formattedTextFieldPrice.getValue();
+                    Date date = new Date();
+
 
                     Users user = new Users(name, id, age, email, phone);
                     usersControl.addUser(user);
-                    Model.Sells sell = new Model.Sells(plan, user, quantitySell, adultsQuan, childrenQuan, priceSell);
+                    Model.Sells sell = new Model.Sells(plan, user, adultsQuan, childrenQuan, priceSell,date);
                     sellsControl.addSell(sell);
-                    System.out.println(sellsControl.sellsArrayList.toString());
+                    System.out.println(sellsControl.getSellsArrayList().toString());
 
-                    ObjectToFileWriter.saveInDocument(sell, "C:\\Users\\shonk\\OneDrive\\Escritorio\\Zoologico 2.0\\sellReport.txt");
                 } else {
                     JOptionPane.showMessageDialog(null, "Cannot accept the sale. The plan has limited capacity.");
                 }
@@ -160,7 +138,6 @@ public class Sells extends JFrame {
         userAgeTextField.setText("");
         userEmailTextField.setText("");
         userNumberTextField.setText("");
-        spinnerQuantitySells.setModel(model);
         spinnerAdults.setValue(0);
         spinnerChildren.setValue(0);
         formattedTextFieldPrice.setText("");

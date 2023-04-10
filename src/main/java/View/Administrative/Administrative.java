@@ -1,13 +1,16 @@
 package View.Administrative;
 
-import View.Menu;
 
+import Control.CRUD.sellsControl;
+import View.Menu;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 
 public class Administrative extends JFrame {
-    private JButton reportButton1;
+    private JButton reportButton;
     private JButton sellButton;
     private JButton backButton;
     private JPanel administrativePanel;
@@ -28,10 +31,18 @@ public class Administrative extends JFrame {
             }
         });
 
-        reportButton1.addActionListener(new ActionListener() {
+        reportButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                ArrayList<Model.Sells> sellsList = sellsControl.getSellsArrayList();
 
+                try {
+                    PDFGeneratorSells.generatePDFReport(sellsList);
+                    JOptionPane.showMessageDialog(null, "Report has been generated successful");
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Error generating report" + ex.getMessage());
+                    ex.printStackTrace();
+                }
             }
         });
 

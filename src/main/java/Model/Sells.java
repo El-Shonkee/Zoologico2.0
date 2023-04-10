@@ -1,23 +1,36 @@
 package Model;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
 public class Sells {
-
+    int  billNumber, adults, children, price;
     Users user;
+    Plans plan;
+    Date date;
 
+    public Sells(Plans plan, Users user, int adults, int children, int price,Date date) {
+        this.plan = plan;
+        this.billNumber = randomBillGenerator();
+        this.user = user;
+        this.adults = adults;
+        this.children = children;
+        this.price = price;
+        this.date = new Date();
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
     public int getBillNumber() {
         return billNumber;
     }
-
-    public void setBillNumber(int billNumber) {
-        this.billNumber = billNumber;
-    }
-
-    int  billNumber,quantitySell, adults, children, price;
-
     public Plans getPlan() {
         return plan;
     }
@@ -26,35 +39,11 @@ public class Sells {
         this.plan = plan;
     }
 
-    Plans plan;
-
     private static Set<Integer> billGenerated = new HashSet<Integer>();
     private static Random randomGenerator = new Random();
 
-    public Sells(Plans plan, Users user, int quantitySell, int adults, int children, int price) {
-        this.plan = plan;
-        this.billNumber = randomBillGenerator();
-        this.user = user;
-        this.quantitySell = quantitySell;
-        this.adults = adults;
-        this.children = children;
-        this.price = price;
-    }
-
     public Users getUser() {
         return user;
-    }
-
-    public void setUser(Users user) {
-        this.user = user;
-    }
-
-    public int getQuantitySell() {
-        return quantitySell;
-    }
-
-    public void setQuantitySell(int quantitySell) {
-        this.quantitySell = quantitySell;
     }
 
     public int getAdults() {
@@ -85,11 +74,11 @@ public class Sells {
     public String toString() {
         return  "user=" + user +
                 ", billNumber=" + billNumber +
-                ", quantitySell=" + quantitySell +
                 ", adults=" + adults +
                 ", children=" + children +
                 ", price=" + price +
-                ", plan=" + plan;
+                ", plan=" + plan+
+                ", Date=" + date;
     }
 
     private static int randomBillGenerator() {
@@ -100,7 +89,5 @@ public class Sells {
         billGenerated.add(newIdBillNumber);
         return newIdBillNumber;
     }
-
-
 
 }

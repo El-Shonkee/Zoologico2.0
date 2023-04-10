@@ -1,10 +1,12 @@
 package View.Commercial;
 
+import Model.Plans;
 import View.Menu;
-
+import Control.CRUD.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class Commercial extends JFrame {
     private JButton reportButton;
@@ -14,6 +16,7 @@ public class Commercial extends JFrame {
     private JPanel commercialMenu;
 
     public Commercial() {
+
         setContentPane(commercialMenu);
         setTitle("Commercial menu");
         setSize(500,300);
@@ -40,10 +43,17 @@ public class Commercial extends JFrame {
         reportButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                ArrayList<Plans> plansList = plansControl.getPlansArrayList();
 
+                try {
+                    PDFGeneratorPlans.generatePDFReport(plansList);
+                    JOptionPane.showMessageDialog(null, "Report has been generates succesfully");
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Error generating report" + ex.getMessage());
+                    ex.printStackTrace();
+                }
             }
         });
-
 
         backButton.addActionListener(new ActionListener() {
             @Override

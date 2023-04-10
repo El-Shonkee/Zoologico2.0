@@ -15,7 +15,7 @@
       <title-color color="-4473925"/>
     </border>
     <children>
-      <component id="fe029" class="javax.swing.JButton" binding="reportButton1" default-binding="true">
+      <component id="fe029" class="javax.swing.JButton" binding="reportButton">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="2" use-parent-layout="false">
             <preferred-size width="181" height="31"/>
