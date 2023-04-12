@@ -19,7 +19,7 @@ public class Commercial extends JFrame {
 
         setContentPane(commercialMenu);
         setTitle("Commercial menu");
-        setSize(500,300);
+        setSize(338,400);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         setLocationRelativeTo(null);
@@ -47,7 +47,7 @@ public class Commercial extends JFrame {
 
                 try {
                     PDFGeneratorPlans.generatePDFReport(plansList);
-                    JOptionPane.showMessageDialog(null, "Report has been generates succesfully");
+                    JOptionPane.showMessageDialog(null, "Report has been generated successfully");
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Error generating report" + ex.getMessage());
                     ex.printStackTrace();

@@ -16,7 +16,7 @@ public class Administrative extends JFrame {
     public Administrative() {
         setContentPane(administrativePanel);
         setTitle("Administrative");
-        setSize(500, 300);
+        setSize(425, 400);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         setLocationRelativeTo(null);

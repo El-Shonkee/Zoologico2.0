@@ -1,4 +1,5 @@
 package View.Commercial;
+
 import Control.CRUD.plansControl;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -121,7 +122,7 @@ public class ModifyPlan extends JFrame {
                     Path filePath = Paths.get("C:\\Users\\shonk\\OneDrive\\Escritorio\\Zoologico 2.0\\JSONS\\Plans.json");
                     try {
                         objectMapper.writeValue(filePath.toFile(), plansControl.plansArrayList);
-                        JOptionPane.showMessageDialog(null, "Plan has been deleted succesfully");
+                        JOptionPane.showMessageDialog(null, "Plan has been deleted successfully");
                     } catch (IOException ex) {
                         JOptionPane.showMessageDialog(null, "Error in the process");
                         ex.printStackTrace();

@@ -23,7 +23,6 @@ public class PDFGeneratorSells {
         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("C:\\Users\\shonk\\OneDrive\\Escritorio\\Zoologico 2.0\\Reports\\Sells-Report.pdf"));
         document.open();
         PdfContentByte canvas = writer.getDirectContent();
-
         document.add(new Paragraph(" "));
         document.add(new Paragraph(" "));
         document.add(new Paragraph(" "));

@@ -4,44 +4,54 @@
  */
 package Model;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 /**
  *
  * @author andrea.correaa1
  */
 
-
-
 public class Animals {
-    String name, type, species;
-    float age, weight;
-    int quantity,zone, animalID;
+    String name;
+    String gender;
+
+    String species;
+    String zone;
+    float weight;
+    float age;
+    private int animalID;
 
     private static Set<Integer> iDsGenerated = new HashSet<Integer>();
     private static Random randomGenerator = new Random();
 
-    public Animals(int animalID,
-                   String name,
-                   String type, 
-                   String species, 
-                   float age, 
-                   float weight, 
-                   int quantity, 
-                   int zone) {
+    public Animals(String name,
+                   String gender,
+                   String species,
+                   float age,
+                   float weight,
+                   String zone) {
         this.animalID = randomIdGenerator();
         this.name = name;
-        this.type = type;
+        this.gender = gender;
         this.species = species;
         this.age = age;
         this.weight = weight;
-        this.quantity = quantity;
         this.zone = zone;
     }
 
-    public Animals(){
+    public Animals() {
+
+    }
+    public String getSpecies() {
+        return species;
+    }
+
+    public String getZone() {
+        return zone;
     }
 
     public int getAnimalID(){
@@ -60,16 +70,12 @@ public class Animals {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public String getGender() {
+        return gender;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getSpecies() {
-        return species;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public void setSpecies(String species) {
@@ -84,14 +90,6 @@ public class Animals {
         this.weight = weight;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
     public float getAge() {
         return age;
     }
@@ -100,11 +98,7 @@ public class Animals {
         this.age = age;
     }
 
-    public int getZone() {
-        return zone;
-    }
-
-    public void setZone(int zone) {
+    public void setZone(String zone) {
         this.zone = zone;
     }
 
@@ -121,11 +115,10 @@ public class Animals {
     public String toString(){
         return "Animal ID= "+animalID + " " +
                "Name="+ name + " " +
-               "Type="+ type+ " " +
+               "Gender="+ gender + " " +
                "Specie="+ species + " " +
                "Age="+ age + " " +
                "Weight="+ weight + " " +
-               "Quantity="+ quantity + " " +
                "Zone="+ zone;
     }
 
