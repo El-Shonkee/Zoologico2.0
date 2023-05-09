@@ -47,7 +47,7 @@ public class animalsControl {
         // Leer el archivo JSON como una cadena
         String jsonStr = Files.readString(filePath, StandardCharsets.UTF_8);
 
-        // Parsear la cadena JSON a un array de objetos Plans
+        // Parsear la cadena JSON a un array de objetos
         Gson gson = new Gson();
         Animals[] animalsArr = gson.fromJson(jsonStr, Animals[].class);
 

@@ -18,7 +18,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Animals {
     String name;
     String gender;
-
     String species;
     String zone;
     float weight;

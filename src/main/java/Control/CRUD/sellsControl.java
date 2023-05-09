@@ -20,10 +20,6 @@ public class sellsControl {
         sellsArrayList.add(sell);
     }
 
-    public void deleteSell(Sells sell){
-        sellsArrayList.remove(sell);
-    }
-
     @Override
     public String toString() {
         return "sellsControl{"+ sellsArrayList +"}";
